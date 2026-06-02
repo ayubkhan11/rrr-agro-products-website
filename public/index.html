@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RRR AGRO PRODUCTS — Premium Coconut Exports From India</title>
+<meta name="description" content="RRR Agro Products — Globally trusted premium coconut export brand from Pollachi, India. International standards, exceptional quality.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script>
+// Suppress extension message channel errors
+window.addEventListener('unhandledrejection', function(e) {
+    if (e.reason && e.reason.message && 
+        e.reason.message.includes('message channel closed')) {
+        e.preventDefault();
+        console.debug('Ignored extension error');
+    }
+});
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- GRAIN OVERLAY -->
+<div class="grain-overlay"></div>
+
+<!-- MOUSE GLOW -->
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- LOADING SCREEN -->
+<div class="loader" id="loader">
+  <div class="loader-brand"><h2>RRR AGRO</h2></div>
+  <div class="loader-line"></div>
+  <div class="loader-text"><span>Premium Coconut Exports</span></div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="iconify" data-icon="mdi:check-circle"></span>
+  <span>Message sent successfully!</span>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">R</div>
+    <div class="nav-logo-text">RRR AGRO<small>Premium Exports</small></div>
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#global">Global Reach</a>
+    <a href="#founder">Founder</a>
+    <a href="#why">Why Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+  </div>
+  <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#global" onclick="closeMobile()">Global Reach</a>
+  <a href="#founder" onclick="closeMobile()">Founder</a>
+  <a href="#why" onclick="closeMobile()">Why Us</a>
+  <a href="#gallery" onclick="closeMobile()">Gallery</a>
+  <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="images/rrr-hero-image.webp" alt="Coconut Plantation">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-gradient"></div>
+
+<!-- LEFT SIDE CARDS -->
+<div class="hero-float float-left-1">
+  <div class="hero-float-card">
+    <div class="num">10<span>+</span></div>
+    <div class="label">Years of Expertise</div>
+  </div>
+</div>
+<div class="hero-float float-left-2">
+  <div class="hero-float-card">
+    <div class="num">5<span>+</span></div>
+    <div class="label">Countries Served</div>
+  </div>
+</div>
+
+<!-- RIGHT SIDE CARDS -->
+<div class="hero-float float-right-1">
+  <div class="hero-float-card">
+    <div class="num">500<span>+</span></div>
+    <div class="label">Tons Exported</div>
+  </div>
+</div>
+<div class="hero-float float-right-2">
+  <div class="hero-float-card">
+    <div class="num">100<span>%</span></div>
+    <div class="label">Quality Assured</div>
+  </div>
+</div>
+  
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>From Pollachi, India</span>
+    </div>
+    <h1>Premium Coconut Exports<br>From the <em>Heart of India</em></h1>
+    <p class="hero-sub">Delivering internationally certified coconut products with uncompromising quality, trusted by global partners across continents.</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn-primary">
+        Explore Our Journey
+        <span class="iconify" data-icon="mdi:arrow-right" style="font-size:16px"></span>
+      </a>
+      <a href="#contact" class="btn-secondary">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number"><span class="counter" data-target="10">0</span><span>+</span></div>
+      <div class="stat-label">Years of Expertise</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-number"><span class="counter" data-target="5">0</span><span>+</span></div>
+      <div class="stat-label">Countries Served</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-number"><span class="counter" data-target="500">0</span><span>+</span></div>
+      <div class="stat-label">Tons Exported</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-number"><span class="counter" data-target="100">0</span><span>%</span></div>
+      <div class="stat-label">Quality Assured</div>
+    </div>
+  </div>
+</div>
+
+<!-- GLOBAL EXPORT MAP -->
+<section class="map-section section-dark" id="global">
+  <div class="map-container">
+    <div class="map-header reveal">
+      <div class="section-label" style="justify-content:center">
+        <div class="section-label-line"></div>
+        <span>Global Presence</span>
+        <div class="section-label-line"></div>
+      </div>
+      <h2 class="section-title light">Delivering Premium Indian Coconuts<br><em>Across The Globe</em></h2>
+      <p class="section-desc light" style="margin:16px auto 0;text-align:center">Our export network spans the Middle East, Southeast Asia, North America, and Europe — built on trust and quality.</p>
+    </div>
+    <div class="map-canvas-wrap reveal reveal-delay-2">
+      <video class="global-video" autoplay loop muted playsinline disablePictureInPicture controlslist="nodownload nofullscreen noremoteplayback">
+       <!-- ✅ Correct - same folder level -->
+        <source src="video/plan-animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER SECTION -->
+<section class="founder" id="founder">
+  <div class="founder-grid">
+    <div class="founder-image-wrap reveal">
+      <div class="founder-image">
+        <img src="https://picsum.photos/seed/business-leader-portrait/600/800.jpg" alt="R. Ramesh - Founder">
+      </div>
+      <div class="founder-badge-float">
+        <div class="big">10+</div>
+        <div class="small">Years of Expertise</div>
+      </div>
+    </div>
+    <div class="founder-content">
+      <div class="section-label reveal">
+        <div class="section-label-line"></div>
+        <span>Our Founder</span>
+      </div>
+      <h2 class="section-title reveal reveal-delay-1">R. Ramesh</h2>
+      <div class="founder-role reveal reveal-delay-1">Founder & Chief Executive</div>
+      <p class="founder-text reveal reveal-delay-2">With over a decade of deep-rooted experience in the coconut industry, R. Ramesh founded RRR Agro Products in 2022 with a singular vision — to position Indian coconuts at the forefront of global export markets. His journey from the lush plantations of Pollachi to the international trade arena reflects an unwavering commitment to quality, authenticity, and sustainable agricultural practices.</p>
+      <div class="founder-quote reveal reveal-delay-3">
+        <p>"Quality and trust are the foundation of every export we deliver. Each coconut that leaves our facility carries the legacy of our land and the promise of excellence."</p>
+        <cite>— R. Ramesh, Founder</cite>
+      </div>
+      <div class="founder-highlights">
+        <div class="founder-highlight reveal reveal-delay-3">
+          <div class="icon"><span class="iconify" data-icon="mdi:shield-check"></span></div>
+          <h4>Quality First</h4>
+          <p>Rigorous quality control at every stage</p>
+        </div>
+        <div class="founder-highlight reveal reveal-delay-4">
+          <div class="icon"><span class="iconify" data-icon="mdi:handshake"></span></div>
+          <h4>Trust Built</h4>
+          <p>Long-term global business relationships</p>
+        </div>
+        <div class="founder-highlight reveal reveal-delay-5">
+          <div class="icon"><span class="iconify" data-icon="mdi:leaf"></span></div>
+          <h4>Sustainable</h4>
+          <p>Eco-conscious farming practices</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about section" id="about">
+  <div class="about-grid">
+    <div class="about-images reveal">
+      <div class="about-img-main">
+        <img src="https://picsum.photos/seed/tropical-coconut-farm/700/880.jpg" alt="Coconut Farm">
+      </div>
+      <div class="about-img-float">
+        <img src="https://picsum.photos/seed/fresh-coconut-harvest/520/400.jpg" alt="Fresh Coconuts">
+      </div>
+      <div class="about-img-accent"></div>
+    </div>
+    <div class="about-content">
+      <div class="section-label reveal">
+        <div class="section-label-line"></div>
+        <span>Our Story</span>
+      </div>
+      <h2 class="section-title light reveal reveal-delay-1">Rooted in Tradition,<br><em>Built for The World</em></h2>
+      <p class="section-desc light reveal reveal-delay-2">Nestled in the coconut heartland of Pollachi, Tamil Nadu, RRR Agro Products sources the finest coconuts from carefully selected plantations. Every product undergoes stringent quality checks to meet international export standards — from farm to global destination.</p>
+      <div class="about-features">
+        <div class="about-feature reveal reveal-delay-2">
+          <div class="about-feature-icon"><span class="iconify" data-icon="mdi:map-marker-radius"></span></div>
+          <div>
+            <h4>Pollachi Origin</h4>
+            <p>Sourced from India's premium coconut-growing region, known for its superior quality produce.</p>
+          </div>
+        </div>
+        <div class="about-feature reveal reveal-delay-3">
+          <div class="about-feature-icon"><span class="iconify" data-icon="mdi:certificate"></span></div>
+          <div>
+            <h4>Export Certified</h4>
+            <p>Compliant with international phytosanitary and quality standards for global markets.</p>
+          </div>
+        </div>
+        <div class="about-feature reveal reveal-delay-4">
+          <div class="about-feature-icon"><span class="iconify" data-icon="mdi:truck-delivery"></span></div>
+          <div>
+            <h4>End-to-End Logistics</h4>
+            <p>Seamless supply chain from plantation to port, ensuring freshness and timely delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section section" id="why">
+  <div class="why-header">
+    <div class="section-label reveal" style="justify-content:center">
+      <div class="section-label-line"></div>
+      <span>Why Choose Us</span>
+      <div class="section-label-line"></div>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center">The <em>RRR Advantage</em></h2>
+    <p class="section-desc reveal reveal-delay-2" style="text-align:center;margin:16px auto 0">Every aspect of our export process is designed to deliver unmatched quality and reliability to our global partners.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-card-icon"><span class="iconify" data-icon="mdi:diamond-stone"></span></div>
+      <h3>Premium Export Quality</h3>
+      <p>Each coconut is hand-selected and graded to meet the highest international quality benchmarks before export.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-card-icon"><span class="iconify" data-icon="mdi:sprout"></span></div>
+      <h3>Fresh Farm Sourcing</h3>
+      <p>Direct sourcing from verified plantations in Pollachi ensures absolute freshness and traceability of every product.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-card-icon"><span class="iconify" data-icon="mdi:earth"></span></div>
+      <h3>International Standards</h3>
+      <p>Full compliance with global phytosanitary regulations, APEDA guidelines, and destination country requirements.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-3">
+      <div class="why-card-icon"><span class="iconify" data-icon="mdi:package-variant-closed"></span></div>
+      <h3>Professional Packaging</h3>
+      <p>Industry-leading packaging that preserves freshness during transit and presents a premium unboxing experience.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-4">
+      <div class="why-card-icon"><span class="iconify" data-icon="mdi:account-group"></span></div>
+      <h3>Trusted Relationships</h3>
+      <p>Long-standing partnerships with international buyers built on transparency, reliability, and mutual growth.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-5">
+      <div class="why-card-icon"><span class="iconify" data-icon="mdi:recycle"></span></div>
+      <h3>Sustainable Agriculture</h3>
+      <p>Committed to eco-friendly farming practices that protect the land and support local farming communities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery section" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <div class="section-label-line"></div>
+        <span>Gallery</span>
+      </div>
+      <h2 class="section-title light reveal-delay-1">A Visual <em>Journey</em></h2>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="https://picsum.photos/seed/lush-coconut-plantation/600/400.jpg" alt="Coconut Plantation">
+      </div>
+      
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="https://picsum.photos/seed/coconut-harvest-green/600/400.jpg" alt="Coconut Harvest">
+      </div>
+      
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="https://picsum.photos/seed/coconut-sorting-facility/600/400.jpg" alt="Sorting Facility">
+      </div>
+      
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="https://picsum.photos/seed/export-packaging-premium/600/400.jpg" alt="Export Packaging">
+      </div>
+      
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="https://picsum.photos/seed/shipping-port-logistics/600/400.jpg" alt="Logistics">
+      </div>
+      
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="https://picsum.photos/seed/tropical-farm-aerial/600/400.jpg" alt="Aerial Farm View">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials section" id="testimonials">
+  <div class="testi-header">
+    <div class="section-label reveal" style="justify-content:center">
+      <div class="section-label-line"></div>
+      <span>Testimonials</span>
+      <div class="section-label-line"></div>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center">Trusted by <em>Global Partners</em></h2>
+    <p class="section-desc reveal reveal-delay-2" style="text-align:center;margin:16px auto 0">Hear from the businesses that rely on RRR Agro Products for their premium coconut supply.</p>
+  </div>
+  <div class="testi-slider reveal reveal-delay-3">
+    <div class="testi-track" id="testiTrack">
+      <div class="testi-card">
+        <div class="testi-card-inner">
+          <div class="testi-stars">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+          </div>
+          <p class="testi-text">RRR Agro Products has been our trusted coconut supplier for over two years. Their consistency in quality and timely delivery makes them stand out in the international market. A truly professional export partner.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div class="testi-info">
+              <h4>Ahmed Al-Rashid</h4>
+              <p>Dubai Trading Co., UAE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-card-inner">
+          <div class="testi-stars">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+          </div>
+          <p class="testi-text">The premium quality of coconuts from RRR Agro is unmatched in the Southeast Asian market. Their professional approach to export logistics and quality assurance is truly impressive. Highly recommended.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div class="testi-info">
+              <h4>Sarah Chen</h4>
+              <p>Pacific Foods Pte Ltd, Singapore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-card-inner">
+          <div class="testi-stars">
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+            <span class="iconify" data-icon="mdi:star"></span>
+          </div>
+          <p class="testi-text">Working with RRR Agro has been an excellent experience. Their attention to packaging detail and adherence to US import standards exceeds expectations. They understand what premium export means.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">M</div>
+            <div class="testi-info">
+              <h4>Michael Torres</h4>
+              <p>Global Imports Inc., USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testi-nav">
+    <button class="testi-btn" id="testiPrev" aria-label="Previous"><span class="iconify" data-icon="mdi:chevron-left"></span></button>
+    <div class="testi-dots" id="testiDots">
+      <div class="testi-dot active" data-index="0"></div>
+      <div class="testi-dot" data-index="1"></div>
+      <div class="testi-dot" data-index="2"></div>
+    </div>
+    <button class="testi-btn" id="testiNext" aria-label="Next"><span class="iconify" data-icon="mdi:chevron-right"></span></button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+  <div class="container">
+    
+    <!-- Full Width Map -->
+    <div class="contact-map-full reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3!2d76.95!3d10.66!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM5JzM2LjAiTiA3NsKwNTcnMDAuMCJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <div class="contact-content-grid">
+      
+      <!-- Contact Form -->
+      <div class="contact-form-wrap reveal reveal-delay-1">
+        <h3>Let's Start a Conversation</h3>
+        <p>Interested in partnering with us? Send us your inquiry and our export team will respond within 24 hours.</p>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+          <input type="hidden" name="access_key" value="cdaf2560-19b0-431a-af47-5ae009b3f5c4">
+          <input type="hidden" name="subject" value="New Inquiry - RRR Agro Products">
+          
+          <!-- Hidden Honeypot (Spam Protection) -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Phone (With Country Code)</label>
+            <input type="tel" name="phone" placeholder="+1 (555) 000-0000">
+          </div>
+          
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your requirements..." required></textarea>
+          </div>
+          
+          <!-- Visible Consent Checkbox -->
+          <div class="form-group">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="consentCheck" name="consent" required>
+              <label for="consentCheck">I agree to receive communications from RRR Agro Products. Your information will be used solely for responding to your inquiry.</label>
+            </div>
+          </div>
+          
+          <button type="submit" class="form-submit">Send Inquiry</button>
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </div>
+      
+      <!-- Info Cards -->
+      <div class="contact-info-grid reveal reveal-delay-2">
+        <div class="contact-info-card">
+          <div class="icon"><span class="iconify" data-icon="mdi:map-marker"></span></div>
+          <div class="info-content">
+            <h4>Head Office</h4>
+            <p>132/1A1B, Dhali Road, Periya Negamam, Pollachi, Coimbatore - 642120, Tamil Nadu, India</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="icon"><span class="iconify" data-icon="mdi:phone"></span></div>
+          <div class="info-content">
+            <h4>Phone</h4>
+            <p><a href="tel:+919994045420">+91 99940 45420</a></p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="icon"><span class="iconify" data-icon="mdi:email-outline"></span></div>
+          <div class="info-content">
+            <h4>Email</h4>
+            <p><a href="mailto:rrragroproducts2023@gmail.com">rrragroproducts2023@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="icon"><span class="iconify" data-icon="mdi:clock-outline"></span></div>
+          <div class="info-content">
+            <h4>Business Hours</h4>
+            <p>Mon – Sat: 9:00 AM – 6:00 PM (IST – UTC+5:30)</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <!-- Brand Column -->
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">R</div>
+        <div class="nav-logo-text">RRR AGRO<small>Premium Exports</small></div>
+      </a>
+      <p>Premium coconut exports from the heart of India. Trusted by global partners for quality, reliability, and excellence.</p>
+      <!-- <div class="footer-social">
+        <a href="#" aria-label="Facebook"><span class="iconify" data-icon="mdi:facebook"></span></a>
+        <a href="#" aria-label="Instagram"><span class="iconify" data-icon="mdi:instagram"></span></a>
+        <a href="#" aria-label="WhatsApp"><span class="iconify" data-icon="mdi:whatsapp"></span></a>
+      </div> -->
+    </div>
+
+    <!-- Quick Links Column -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#founder">Our Founder</a></li>
+        <li><a href="#global">Global Reach</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Export Markets Column -->
+    <div class="footer-col">
+      <h4>Export Markets</h4>
+      <ul>
+        <li><a href="#">UAE / Middle East</a></li>
+        <li><a href="#">Singapore</a></li>
+        <li><a href="#">Malaysia</a></li>
+        <li><a href="#">United States</a></li>
+        <li><a href="#">Europe</a></li>
+      </ul>
+    </div>
+
+    <!-- NEW: Keep Connected Column (Right Side) -->
+    <div class="footer-col">
+      <h4>Keep Connected</h4>
+      <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin-bottom: 20px;">
+        Get updates by following us on our social media channels for the latest news and offers.
+      </p>
+      <div class="footer-social" style="margin-top: 15px;">
+        <a href="https://facebook.com/YOUR_PAGE" target="_blank" aria-label="Facebook">
+          <span class="iconify" data-icon="mdi:facebook"></span>
+        </a>
+        <a href="https://instagram.com/YOUR_PAGE" target="_blank" aria-label="Instagram">
+          <span class="iconify" data-icon="mdi:instagram"></span>
+        </a>
+        <a href="https://wa.me/919994045420" target="_blank" aria-label="WhatsApp">
+          <span class="iconify" data-icon="mdi:whatsapp"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p class="copyright">&copy; <span id="autoYear"></span> RRR Agro Products. All rights reserved.</p>
+    <p class="copy-footer-29" style="color: rgba(255,255,255,0.6); margin: 0;">
+      Crafted with ❤️ By
+      <a href="https://www.coderzweb.in/" target="_blank" rel="noopener noreferrer" style="color: #d4b483; text-decoration: none; font-weight: 600;">
+        CoderzWeb
+      </a>
+    </p>
+  </div>
+</footer>
+
+<!-- Auto Year Script -->
+<script>
+  document.getElementById('autoYear').textContent = new Date().getFullYear();
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
