@@ -119,24 +119,64 @@ counters.forEach(counter => {
   counterObserver.observe(counter);
 });
 
-// ===== TESTIMONIAL SLIDER =====
-const track = document.getElementById('testiTrack');
-const dots = document.querySelectorAll('.testi-dot');
-const prevBtn = document.getElementById('testiPrev');
-const nextBtn = document.getElementById('testiNext');
-if (track && dots.length && prevBtn && nextBtn) {
-  let testiIndex = 0;
-  const totalTesti = dots.length;
-  function goToTesti(i) {
-    testiIndex = i;
-    track.style.transform = `translateX(-${i * 100}%)`;
-    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+// Testimonials Slider
+document.addEventListener('DOMContentLoaded', () => {
+  const testiTrack = document.getElementById('testiTrack');
+  const testiPrev = document.getElementById('testiPrev');
+  const testiNext = document.getElementById('testiNext');
+  const testiDots = document.querySelectorAll('.testi-dot');
+  const totalSlides = document.querySelectorAll('.testi-card').length;
+  
+  // Safety check to ensure elements exist
+  if (!testiTrack || !testiPrev || !testiNext) return;
+
+  let currentSlide = 0;
+
+  function updateSlider() {
+    // Move the track
+    testiTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update dots
+    testiDots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
   }
-  prevBtn.addEventListener('click', () => goToTesti(testiIndex <= 0 ? totalTesti - 1 : testiIndex - 1));
-  nextBtn.addEventListener('click', () => goToTesti(testiIndex >= totalTesti - 1 ? 0 : testiIndex + 1));
-  dots.forEach(d => d.addEventListener('click', () => goToTesti(+d.dataset.index)));
-  setInterval(() => goToTesti(testiIndex >= totalTesti - 1 ? 0 : testiIndex + 1), 6000);
-}
+
+  testiNext.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  });
+
+  testiPrev.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+
+  testiDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentSlide = parseInt(dot.dataset.index);
+      updateSlider();
+    });
+  });
+
+  // Auto-play functionality
+  let autoPlay = setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  }, 5000);
+
+  // Pause auto-play on hover
+  const testiSlider = document.querySelector('.testi-slider');
+  if (testiSlider) {
+    testiSlider.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    testiSlider.addEventListener('mouseleave', () => {
+      autoPlay = setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }, 5000);
+    });
+  }
+});
 
 // Contact Form - Web3Forms AJAX Submission
 const contactForm = document.getElementById('contactForm');
