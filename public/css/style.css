@@ -201,10 +201,53 @@ button {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2)
 }
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px
+.nav-logo-avatar {
+  width: 111px;          
+  height: 77px;          
+  background: #e8e8e8; /* Solid light grey */;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-logo-avatar:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.nav-logo-img {
+  width: 150%;
+  height: 150%;
+  object-fit: contain;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .nav-logo-avatar {
+    width: 77px;         /* Increased from 55px (15% larger) */
+    height: 77px;        /* Increased from 55px (15% larger) */
+  }
+}
+
+.nav-logo-img {
+  height: 66px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover .nav-logo-img {
+  opacity: 0.9;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .nav-logo-img {
+    height: 40px;
+  }
 }
 
 .nav-logo-icon {
@@ -1949,6 +1992,40 @@ button {
   color: #C8A96F;
 }
 
+.contact-info-card .phone-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-info-card .phone-number-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.contact-info-card .phone-separator {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+}
+
+/* Or simpler approach - keep everything inline */
+.contact-info-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.8;
+}
+
+.contact-info-card p a {
+    white-space: nowrap;
+    display: inline;
+}
+
+.contact-info-card .info-content p + p {
+    margin-top: 4px;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .contact-content-grid {
@@ -2008,6 +2085,22 @@ button {
 }
 
 /* FOOTER */
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 24px auto; /* 'auto' on left/right centers the block element */
+    width: 50%;               /* 50% width for desktop/larger screens */
+    height: auto;             /* Maintains the aspect ratio */
+    max-width: 350px;         /* Prevents it from getting too huge on very large monitors */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 65%;           /* Slightly wider on mobile so it's not too small */
+        max-width: 250px;
+    }
+}
 .footer {
     background: var(--green-dark);
     color: var(--text-on-dark);
